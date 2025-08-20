@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
-  // Toggle background on scroll
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 30);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 30);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -37,9 +35,9 @@ export default function Navbar() {
           <a href="#how-it-works" className="hover:text-gray-500 transition-colors duration-200">
             How it Works
           </a>
-          <a href="#waitlist" className="hover:text-gray-500 transition-colors duration-200">
+          <Link to="/waitlist" className="hover:text-gray-500 transition-colors duration-200">
             Waitlist
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
