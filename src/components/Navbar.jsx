@@ -25,7 +25,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <div className="text-xl font-bold">
             <span className="text-blue-600">Fin</span>
-            <span className="text-gray-900 dark:text-white">Sight</span>
+            <span className="text-blue-600">Sight</span>
           </div>
         </div>
 
